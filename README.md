@@ -9,10 +9,10 @@ It uses the UFO dataset provided from the file - data.js and display rows that m
 
 The second part of the exercise extends the functionality of the first plus the four criteria from the following input tags:
 
-city
-state
-country
-shape
+1. city
+2. state
+3. country
+4. shape
 
 
 Consequently, system would output UFO sightings from the data.js file that match input from one or more of the criteria specified by the user above.

@@ -22,8 +22,11 @@
  // Select the country element and get the raw HTML node
  var countryElement = d3.select("#country");
 
-  // Select the sphere element and get the raw HTML node
-  var shapeElement = d3.select("#shape");
+ // Select the sphere element and get the raw HTML node
+ var shapeElement = d3.select("#shape");
+ 
+ // Execute when the form is first loaded
+ document.onload = runEnter(1);
 
  
  // Create event handlers 
@@ -31,10 +34,12 @@
  form.on("submit",runEnter);
  
  // Complete the event handler function for the form and the button
- function runEnter() {
+ function runEnter(value) {
  
-     // Prevent the page from refreshing
-     d3.event.preventDefault();
+     // Prevent the page from refreshing 
+     // Don't do it if the form is first loaded
+     if (value!=1)
+        {d3.event.preventDefault()};
  
      // Get the value property of the date element
      var dateValue = dateElement.property("value");
