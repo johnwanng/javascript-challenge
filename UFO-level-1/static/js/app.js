@@ -22,11 +22,12 @@ form.on("submit",runEnter);
 
 // Complete the event handler function for the form and the button
 function runEnter(value) {
-
+    console.log(value);
     // Prevent the page from refreshing
     // Don't do it if the form is first loaded
     if (value!=1)
-        {d3.event.preventDefault();}
+        {   console.log(value + ' inside')
+            d3.event.preventDefault();}
 
     // Get the value property of the date element
     var dateValue = dateElement.property("value");
